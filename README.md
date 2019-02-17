@@ -47,13 +47,13 @@ I have no idea what you are talking about
  example按钮：默认展示示例
  clear按钮
  submit按钮：执行转换结果
- input：用户输入定义及需要转换为问题，回车进行逐条执行。
+ input：用户输入定义及需要转换的问题，回车进行逐条执行。
  
 ```
 
-## 环境
+## 基础环境
 ```shell
-基本：node + ruby
+node + ruby
 ```
 
 ## 安装
