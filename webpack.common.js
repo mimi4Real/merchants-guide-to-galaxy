@@ -12,15 +12,14 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist/js')
 	},
+
 	module: {
 		rules: [
-
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: "babel-loader",
-
+					loader: "babel-loader"
 				}
 			},
 			{
@@ -44,7 +43,7 @@ module.exports = {
 						loader: 'sass-loader',
 					}]
 				})
-			}/*, {
+			}, {
 				test: /\.(png|svg|jpg|gif)$/,
 				exclude: /node_modules/,
 				use: [{
@@ -53,11 +52,11 @@ module.exports = {
 						name: '../img/[name].[ext]'
 					}
 				}]
-			}*/
+			}
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('../css/[name].css'),
+		new ExtractTextPlugin(isProd ? '../css/[name].css' : './dist/css/[name].css'),
 
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('production')
@@ -68,7 +67,7 @@ module.exports = {
 
 function getEntryHtml() {
 	const entryHtml = {
-		template: 'src/view/index.html'
+		template: 'src/index.html'
 	}
 	isProd && (entryHtml.filename = path.resolve(__dirname, './dist/index.html'))
 	return new HtmlWebpackPlugin(entryHtml);
