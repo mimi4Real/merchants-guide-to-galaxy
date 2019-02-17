@@ -26,19 +26,19 @@ const init = function () {
 	});
 
 	const submitBtnEl = document.getElementById(OP_DOM_ID_MAP.SUBMIT);
-	//button提交点击事件
+	//submit按钮点击事件
 	eventUtil.addEventListener(submitBtnEl, 'click', () => {
 		viewOpHandle.handleResult();
 	});
 
 	const testBtnEl = document.getElementById(OP_DOM_ID_MAP.TEST);
-	//测试1按钮点击事件
+	//example按钮点击事件
 	eventUtil.addEventListener(testBtnEl, 'click', () => {
 		viewOpHandle.handleTest();
 	});
 
 	const clearBtnEl = document.getElementById('clear-btn');
-	//清空按钮点击事件
+	//clear按钮点击事件
 	eventUtil.addEventListener(clearBtnEl, 'click', () => {
 		viewOpHandle.handleClear();
 	});
@@ -51,6 +51,12 @@ const init = function () {
  * @type {{addEventListener: ((el, type?, cb?)), removeEventListener: ((el, type, cb))}}
  */
 const eventUtil = {
+	/**
+	 * 事件绑定
+	 * @param el：dom对象
+	 * @param type：事件类型
+	 * @param cb：事件回调函数
+	 */
 	addEventListener(el, type, cb){
 		el.addEventListener(type, (ev) => {
 			cb && cb(ev);
