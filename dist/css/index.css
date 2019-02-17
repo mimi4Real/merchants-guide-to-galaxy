@@ -1,0 +1,82 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #606266;
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif; }
+
+* {
+  box-sizing: border-box; }
+
+/*BEM*/
+.hw-page {
+  width: inherit; }
+  .hw-page__header {
+    width: inherit;
+    magin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 15px;
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5); }
+    .hw-page__header:hover .hw-page__description {
+      opacity: 1;
+      height: auto; }
+  .hw-page__title {
+    text-align: center;
+    margin: 0; }
+  .hw-page__description {
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s,min-height .3s; }
+  .hw-page__body {
+    text-align: center; }
+    .hw-page__body p {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .hw-page__result {
+    color: #409EFF; }
+  .hw-page__tips {
+    color: #F56C6C;
+    font-size: 12px; }
+  .hw-page__button-group {
+    padding: 10px; }
+  .hw-page__button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    text-align: center;
+    outline: none;
+    margin: 0;
+    font-weight: 500;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: .1s; }
+    .hw-page__button:hover {
+      background: #fff;
+      border-color: #409EFF;
+      color: #409EFF; }
+    .hw-page__button.is-submit {
+      color: #67c23a;
+      background: #f0f9eb;
+      border-color: #c2e7b0; }
+  .hw-page__input {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    font-size: inherit;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s; }
+    .hw-page__input::placeholder {
+      color: #c0c4cc;
+      font-size: 14px; }
+    .hw-page__input:hover {
+      border-color: #409EFF; }
+    .hw-page__input:focus {
+      border-color: #409EFF; }
