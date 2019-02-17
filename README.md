@@ -1,7 +1,7 @@
 # merchants-guide-to-galaxy
 ## 说明
 ```shell
-webpack4 + es6 + sass
+Webpack4 + Es6 + Sass
 需求：帮助商人进行罗马数字和阿拉伯数字的转换
 {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 I|X|C|M 可以重复至多三次，不能被跨度大于2的罗马符减去
@@ -41,7 +41,7 @@ I have no idea what you are talking about
   addUnit: 增加转换单位并存储状态
   addSolution: 根据别名和单位计算解决方案，并存储状态
   aliasToRoman: 别名转换为罗马字符（规则：偶数位重复不能超过三次，奇数位不能重复）
-  romanToNumer: 罗马字符转换为数字（规则：奇数位不能被减，偶数位比小且不能被大于2个跨度的罗马字符减去）
+  romanToNumber: 罗马字符转换为数字（规则：奇数位不能被减，偶数位比小且不能被大于2个跨度的罗马字符减去）
  
  页面设计：
  example按钮：默认展示示例
@@ -53,13 +53,13 @@ I have no idea what you are talking about
 
 ## 基础环境
 ```shell
-node + ruby
+Node + Ruby
 ```
 
 ## 安装
 ```shell
-1、全局安装：npm install webpack webpack-cli -g
-2、mocha测试（非必选）：npm install webpack mocha -g
+1、webpack全局安装：npm install webpack webpack-cli -g
+2、mocha测试全局安装（非必选）：npm install webpack mocha -g
 3、局部安装依赖：npm install
 
 开发：npm run start

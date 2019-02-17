@@ -11,7 +11,8 @@
   "author": "wudongdong",
   "keywords": [
     "merchants-guide-to-galaxy",
-    "webpack4"
+    "webpack4",
+    "BEM"
   ],
   "license": "ISC",
   "devDependencies": {
